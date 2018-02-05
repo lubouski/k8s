@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jsapp-deployment
+  labels:
+    app: jsapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jsapp
+  template:
+    metadata:
+      labels:
+        app: jsapp
+    spec:
+      containers:
+      - name: jsapp
+        image: lubowsky/k8-s-docker
+        ports:
+        - containerPort: 8080

@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: jsapp
-  image: lubowsky/k8-s-docker
-  ports:
-  - containerPort: 8080
+    image: lubowsky/k8-s-docker
+    ports:
+    - containerPort: 8080
